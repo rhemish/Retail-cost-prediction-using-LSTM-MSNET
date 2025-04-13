@@ -90,10 +90,10 @@ The reseasonalisation and renormalisation is the main component of the post proc
 ﻿
 ## Code Contributions
 This implementation extends the original LSTM-MSNet code with the following improvements and adaptations:
-•	Dataset Adaptation: Adapted the code to handle a quarterly dataset instead of the hourly dataset used in the original paper. This required changes to the preprocessing pipeline and sequence creation logic.
-•	Early Stopping Implementation: Introduced early stopping logic to automatically terminate training when validation loss stops improving, optimizing training time and preventing overfitting.
-•	Optimized Hyperparameters: Adjusted training settings, reducing batch size (from 412 to 128) and epochs (from 500 to 100), ensuring efficient use of computational resources.
-•	Refined create_sequences Function:
+1	Dataset Adaptation: Adapted the code to handle a quarterly dataset instead of the hourly dataset used in the original paper. This required changes to the preprocessing pipeline and sequence creation logic.
+2	Early Stopping Implementation: Introduced early stopping logic to automatically terminate training when validation loss stops improving, optimizing training time and preventing overfitting.
+3	Optimized Hyperparameters: Adjusted training settings, reducing batch size (from 412 to 128) and epochs (from 500 to 100), ensuring efficient use of computational resources.
+4	Refined create_sequences Function:
 o	Ensured data consistency between input and target sequences.
 o	Reformatted data for compatibility with LSTM models, addressing issues with mismatched dimensions in the original implementation.
-•	Subset Training: Processed a 1,000-row subset from a 24,000-row quarterly dataset due to resource limitations, while ensuring it preserved key patterns and trends.
+5	Subset Training: Processed a 1,000-row subset from a 24,000-row quarterly dataset due to resource limitations, while ensuring it preserved key patterns and trends.
